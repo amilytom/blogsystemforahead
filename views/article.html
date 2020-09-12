@@ -1,0 +1,23 @@
+<!--引入公共头部-->
+{{include './common/header.html'}}
+<div class="content">
+  <div class="content_resize">
+    <div class="mainbar">
+      <div class="article">
+        <!--获取文章标题-->
+        <h2>{{data.title}}</h2>
+        <div class="clr"></div>
+        <!--获取分类名称和链接-->
+        <p><a href="/cate/{{data.cate}}">{{data.cateName}}</a></p>
+        <!--获取文章创建时间-->
+        <p> 张三 <span>&nbsp;&bull;&nbsp;</span> {{data.createdAt}} </p>
+        <!--获取文章内容-->
+        {{data.content}}
+      </div>
+    </div>
+    <!--引入公共侧边栏-->
+    {{include './common/sidebar.html'}}
+  </div>
+</div>
+<!--引入公共底部-->
+{{include './common/footer.html'}}

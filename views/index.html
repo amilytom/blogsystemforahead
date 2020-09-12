@@ -1,0 +1,53 @@
+<!--引入公共头部-->
+{{include './common/header.html'}}
+<div class="content">
+  <div class="content_resize">
+    <div class="mainbar">
+      <!--循环文章列表-->
+      {{each data.list item}}
+      <div class="article">
+        <!--获取标题和链接-->
+        <h2><a href="/article/{{item.id}}">{{item.title}}</a></h2>
+        <div class="clr"></div>
+        <!--获取文章创建时间-->
+        <p> 张三  <span>&nbsp;&bull;&nbsp;</span>  {{item.createdAt}} </p>
+        <div class="clr"></div>
+        <!--获取文章摘要-->
+        {{item.desc}}
+        <!--获取文章id拼接链接-->
+        <p><a href="/article/{{item.id}}">阅读更多</a></p>
+      </div>
+      {{/each}}
+      <!--分页-->
+      <div class="article" style="padding:5px 20px 2px 20px; background:none; border:0;">
+        <p>
+            <span class="buttons">
+              <!--判断当前页是否为第1页-->
+              {{if data.page > 1}}
+              <!--将上一页按钮设置可点击-->
+              <a href="?page={{data.page-1}}" class="active">上一页</a>
+              {{else}}
+              <!--将上一页按钮禁止-->
+              <a class="disabled">上一页</a>
+              {{/if}}
+              <!--获取当前页码-->
+              <a class="disabled">当前第{{data.page}}页</a>
+              <!--判断当前页是否为最后一页-->
+              {{if data.page < data.pageCount}}
+              <!--将下一页按钮设置可点击-->
+              <a href="?page={{data.page+1}}" class="active">下一页</a>
+              {{else}}
+              <!--将下一页按钮禁止-->
+              <a class="disabled">下一页</a>
+              {{/if}}
+
+            </span>
+        </p>
+      </div>
+    </div>
+    <!--引入公共侧边栏-->
+    {{include './common/sidebar.html'}}
+  </div>
+</div>
+<!--引入公共底部-->
+{{include './common/footer.html'}}

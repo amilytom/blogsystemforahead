@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "async": "^2.6.2",
+    "cookie-parser": "~1.4.3",
+    "dateformat": "^3.0.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-art-template": "^1.0.1",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.7.1"
+  }
+}

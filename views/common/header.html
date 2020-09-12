@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{if path == 'index'}}
+  <title>{{blogInfo.title}} - {{blogInfo.subtitle}}</title>
+  {{else if path == 'about'}}
+  <title>关于我们 - {{blogInfo.title}}</title>
+  {{else}}
+  <title>{{title}} - {{blogInfo.title}}</title>
+  {{/if}}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1>{{blogInfo.title}}
+          <small>{{blogInfo.subtitle}}</small>
+        </h1>
+      </div>
+      <div class="clr"></div>
+      <div class="menu_nav">
+        <ul>
+          <li class="{{path === 'index' ? 'active' : ''}}"><a href="/">首页</a></li>
+          {{each cateList cate}}
+          <li class="{{curCate == cate.id ? 'active' : ''}}"><a href="/cate/{{cate.id}}">{{cate.name}}</a></li>
+          {{/each}}
+          <li class="{{path === 'about' ? 'active' : ''}}"><a href="/about">关于我们</a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+
+  <div class="clr"></div>

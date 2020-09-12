@@ -1,0 +1,17 @@
+<!--引入公共头部-->
+{{include './common/header.html'}}
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          <h2>关于我们</h2><div class="clr"></div>
+          <!--获取关于我们内容-->
+          {{data.about}}
+        </div>
+      </div>
+      <!--引入公共侧边栏-->
+      {{include './common/sidebar.html'}}
+    </div>
+  </div>
+<!--引入公共底部-->
+{{include './common/footer.html'}}

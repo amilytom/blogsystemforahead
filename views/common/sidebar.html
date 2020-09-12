@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="gadget">
+    <h2>推荐文章</h2>
+    <div class="clr"></div>
+    <ul class="ex_menu">
+      {{each randomArticleList item}}
+      <li><a href="/article/{{item.id}}" title="{{item.title}}">{{item.title}}</a> </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div class="clr"></div>
