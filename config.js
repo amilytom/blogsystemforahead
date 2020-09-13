@@ -7,7 +7,7 @@ const config = {
     host: 'localhost',
     database: 'blogforyou',
     username: 'root',
-    password: '50165428'
+    password: '246810'
   }
 };
 
